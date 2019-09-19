@@ -93,7 +93,6 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new CopyWebpackPlugin([
             { from: './src/asset/favicon', to: './asset/favicon' },
-            { from: './src/asset/webfonts', to: './asset/webfonts' },
             { from: './src/asset/img', to: './asset/img' }
             ]),
         new MiniCssExtractPlugin({
