@@ -1,0 +1,129 @@
+/* slider-01 */
+.fekit-slider-1
+    transition: ease-in-out .3s
+    .owl-carousel
+        +media-breakpoint-up(md)
+            height: 400px
+            overflow: hidden
+        +media-breakpoint-up(lg)
+            height: 800px
+            overflow: hidden
+        // Content slide
+        .owl-stage-outer
+            .item
+                figure
+                    position: relative
+                    .box__img
+                        width: 100%
+                        height: 100%
+                        position: absolute
+                        top: 0
+                        left: 0
+                        // z-index: 90
+                        transition: ease-in-out .5s
+                        background: rgba(0, 0, 0, 0.2)
+                    figcaption
+                        position: absolute
+                        top: 35%
+                        left: 10%
+                        width: 80%
+                        h3
+                            font-size: 1.5rem
+                            color: $white
+                        p
+                            color: $white
+                            font-size: .8rem
+                            display: block
+                            text-overflow: ellipsis
+                            word-wrap: break-word
+                            overflow: hidden
+                            max-height: calc(3.6em + .8rem)
+                            line-height: 1.2rem
+                        a.btn.btn-outline-fekit
+                            transition: ease-in-out .3s
+                            border-radius: 0
+                            margin-right: .5rem
+                            border: 1px solid $main-2
+                            background: $main-2
+                            color: $white
+                            text-transform: uppercase
+                            font-size: .8rem
+                            &:hover
+                                border: 1px solid $white
+                                background: $white
+                                color: $main-2
+                        a.btn.btn-outline-fekit-2
+                            @extend .btn.btn-outline-fekit
+                            border: 1px solid $white
+                            background: rgba($white, 0)
+                            color: $white
+                            &:hover
+                                border: 1px solid $white
+                                background: $white
+                                color: $main-2
+                        +media-breakpoint-up(sm)
+                            top: 30%
+                            width: 60%
+                        +media-breakpoint-up(md)
+                            width: 40%
+                            h3
+                                font-size: 2.5rem
+                            p
+                                font-size: 1rem
+                        +media-breakpoint-up(xl)
+                            top: 40%
+                            width: 40%
+                            h3
+                                font-size: 3.5rem
+
+        // navs || dots
+        .owl-nav
+            .owl-prev
+                position: absolute
+                top: 50%
+                left: 1rem
+                width: 2.5rem
+                height: 2.5rem
+                border-radius: 1px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba($white, .5)
+                transition: ease-in-out .3s
+                &:hover, &:focus
+                    background: rgba($main, .5)
+                &:active
+                    background: rgba($main-2, .5)
+            .owl-next
+                position: absolute
+                top: 50%
+                right: 1rem
+                width: 2.5rem
+                height: 2.5rem
+                border-radius: 1px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba($white, .5)
+                transition: ease-in-out .3s
+                &:hover, &:focus
+                    background: rgba($main, .5)
+
+                &:active
+                    background: rgba($main-2, .5)
+        .owl-dots
+            width: 5rem
+            position: absolute
+            bottom: 5%
+            left: calc(50% - 2.5rem)
+            .owl-dot
+                span
+                    background: lighten($main, 50)
+                &.active
+                    span
+                        background: lighten($main, 20)
+    .owl-prev
+
+
+
+

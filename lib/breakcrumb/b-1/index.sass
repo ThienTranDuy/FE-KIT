@@ -1,0 +1,39 @@
+.fekit-breakcrumb-1
+    padding: 2.5rem 0
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    height: 300px
+    position: relative
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+        height: calc(300px + 4rem)
+    .overlay
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        // background: linear-gradient(to right, white 0%, rgba($white, 0) 100%)
+        background: rgba($black,.5)
+    h5
+        color: white
+        position: absolute
+        width: 80%
+        text-align: center
+        top: calc(50% - 0.75rem - 0.25rem + 2rem)
+        left: calc(50% - 40%)
+        font-size: 1.5rem
+        height: 1.5rem
+        line-height: 1.5rem
+        a
+            color: $white
+            &:hover, &:active
+                color: $extra
+        +media-breakpoint-up(lg)
+            width: 30rem
+            font-size: 2rem
+            height: 2rem
+            line-height: 2rem
+            top: calc(50% - 1rem - .25rem + 4rem)
+            left: calc(50% - 15rem)

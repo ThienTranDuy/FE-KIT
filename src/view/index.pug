@@ -1,0 +1,19 @@
+extends ./layout/master
+include ./include/_mixin
+block title
+  title Trang chủ
+block content
+    // START HEADER
+    //- include ../../lib/preloading/p-1/index
+    include ../../lib/header/h-1/index
+    include ../../lib/slider/s-1/index
+    // START MAIN CONTENT
+    main
+        include ../../lib/news/n-1/index
+        include ../../lib/form/f-1/index
+        include ../../lib/carousel/c-1/index
+    // START FOOTER
+    include ../../lib/footer/f-1/index
+    include ../../lib/plugin/back-to-top/index
+
+

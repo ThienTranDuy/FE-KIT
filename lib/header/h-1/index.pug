@@ -1,0 +1,105 @@
+header.fekit-header-h-1
+    section.headertop
+        .container
+            .headertop--frame
+                .headertop__left
+                    ul.nav
+                        li.nav-items
+                            a.nav-link(href="javascript:void(0)")
+                                i.strong.fas.fa-phone
+                                |   Liên hệ: <span class="strong">0934.113.918</span>
+                        li.nav-items
+                            a.nav-link(href="javascript:void(0)")
+                                i.strong.fas.fa-envelope
+                                |   Email: <span class="strong">dinhtrung@saladci.com</span>
+                        li.nav-items
+                            a.nav-link(href="javascript:void(0)")
+                                i.strong.fas.fa-map-marker-alt
+                                |   Địa chỉ: <span class="strong">194 Nguyễn Văn Lượng, P.17, Q.Gò Vấp, TP.HCM</span>
+                .headertop__right
+                    ul.nav
+                        li.nav-items
+                            a.nav-link(href="tai-khoan-dang-nhap.html")
+                                i.strong.fas.fa-user
+                                | Tài khoản
+                        li.nav-items
+                            a.nav-link(href="tai-khoan-dang-ki.html") <span class="strong">Đăng kí</span>
+    section.headermain
+        .container-fluid
+            .overlay
+            nav.navbar.navbar-expand-xl
+                a.navbar-brand(href="index.html")
+                    img(src="./asset/img/saladci/logo-min-reverse.png")
+                button.navbar-toggler
+                    i.fas.fa-bars
+                .navbar-collapse.offcanvas-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href="index.html") Trang Chủ
+                        li.nav-item
+                            a.nav-link(href="#") Thiết kế
+                        li.nav-item
+                            a.nav-link(href="#") Quy trình
+                        li.nav-item.dropdown
+                            a.nav-link.dropdown-toggle(href='gioi-thieu.html' data-toggle='dropdown') Đội ngũ
+                            .dropdown-menu
+                                a.dropdown-item(href='gioi-thieu.html') Về chúng tôi
+                                a.dropdown-item(href='gioi-thieu.html') Tầm nhìn
+                                a.dropdown-item(href='gioi-thieu.html') Sứ mệnh
+                                a.dropdown-item(href='gioi-thieu.html') Lịch sử hình thành
+                        li.nav-item
+                            a.nav-link(href="#") Dự án
+                        li.nav-item
+                            a.nav-link(href="san-pham.html") Nội thất
+                        li.nav-item
+                            a.nav-link(href="tin-tuc.html") Tin tức
+                        li.nav-item
+                            a.nav-link(href="lien-he.html") Liên hệ
+                        li.nav-item.d-block.d-xl-none
+                            a.nav-link(href="tai-khoan-dang-ki.html") Đăng kí
+                        li.nav-item.d-block.d-xl-none
+                            a.nav-link(href="tai-khoan-dang-nhap.html") Đăng nhập
+                .menutool
+                    .menutool__search
+                        .search
+                            //- input.form-control(type="text" placeholder="Tìm kiếm")
+                            button.btn.btn-outline-fekit
+                                i.fa.fa-search
+                    .menutool__shop
+                        .btn.btn-outline-fekit
+                            i.fas.fa-shopping-bag
+                            span.menutool__shop--count 99
+.fekit-header-h-1__search
+    .search__header
+        .search__header--title Tìm kiếm
+        button.btn.btn-outline-fekit
+            i.fas.fa-times
+    .search__body
+        form.search__body--form
+            input.form-control(type="search" placeholder="Tìm kiếm")
+.fekit-header-h-1__shop
+    .shop__header
+        .shop__header--title Có 99 sản phẩm trong giỏ hàng
+        button.btn.btn-outline-fekit
+            i.fas.fa-times
+    form.shop__body
+        ul
+            - for (var i = 0; i < 10; i++)
+                li
+                    figure
+                        img(src="./asset/img/product/03.jpg")
+                        figcaption
+                            h6.figcaption__title Product name 01
+                            .figcaption__content Kích cỡ: 32
+                            .figcaption__content Màu sắc: Xám
+                            .figcaption__content--amount 715.000 đ x 1
+                        i.fas.fa-trash-alt
+    .shop__footer
+        .shop__footer--total
+            .shop__footer--totalContent
+               | Tạm tính: <strong class="figcaption__content--amount">715.000 đ</strong>
+        .shop__footer--button
+            a.shop__footer--buttonLeft(href="gio-hang-dang-nhap.html")
+                i.fas.fa-cart-arrow-down
+                |   Tiến hành thanh toán
+            a.shop__footer--buttonRight(href="gio-hang.html") Giỏ hàng

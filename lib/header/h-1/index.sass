@@ -1,0 +1,370 @@
+////////////////////////////////////////////////////////////////
+// START HEADER 01
+////////////////////////////////////////////////////////////////
+header.fekit-header-h-1
+    box-shadow: 0px 1px lighten($main, 5)
+    background: $black
+    transition: all .5s ease-in-out
+    z-index: 91
+    position: fixed
+    top: 0
+    width: 100%
+    // Header top
+    .headertop
+        box-shadow: 0px 1px lighten($main, 5)
+        display: none
+        padding: .5rem 0
+        .headertop--frame
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 2rem
+            .nav
+                justify-content: center
+                align-items: center
+                .nav-link
+                    color: $white
+                    font-size: .9rem
+                    padding: 0 1.5rem 0 0
+                    &:hover, &:active
+                        color: $main
+                svg
+                    margin-right: .5rem
+            .strong
+                color: $main
+        +media-breakpoint-up(xl)
+            display: block
+    // Header main
+    .headermain
+        position: initial
+        // Overlay
+        .overlay
+            opacity: 0
+            position: inherit
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: -1
+            background: rgba($black, .8)
+            transition: ease-in-out .5s
+        // Navigation
+        .navbar
+            height: 4rem
+            padding: 0rem
+            .navbar-collapse
+                justify-content: flex-end
+                .navbar-nav
+                    .dropdown
+                        .dropdown-menu
+                            background: $black
+                            border-color: rgba(darken($main, 5), .5)
+                            border-radius: 0
+                            .dropdown-item
+                                color: $white
+                                &:hover, &:active
+                                    background: rgba(darken($main, 5), .5)
+                                    color: $main
+                        &:hover, &:active, &:focus
+                            .dropdown-menu
+                                display: block
+                        +media-breakpoint-up(xl)
+                            .dropdown-menu
+                                background: rgba($main, .95)
+                                border: none
+                                box-shadow: 0px 0px 5px rgba($black, .3)
+                                margin-top: -.2rem
+                                .dropdown-item
+                                    color: $white
+                                    &:hover, &:active, &:focus
+                                        background: lighten($main, 5)
+                                        color: $white
+                            .dropdown-toggle
+                                &:after
+                                    display: none
+                                    border-top: 0
+                    .nav-item
+                        .nav-link
+                            color: $white
+                            letter-spacing: 1px
+                            text-transform: uppercase
+                            &.active, &:hover
+                                color: $main
+                        +media-breakpoint-up(lg)
+                            padding: 0 .5rem !important
+                            &.active, &:hover
+                                .nav-link
+                                    color: $main
+                                    &:after
+                                        background-size: 100% 2px, auto
+                            .nav-link
+                                &:after
+                                    content: ''
+                                    display: block
+                                    width: 100%
+                                    height: 1px
+                                    background-image: linear-gradient($main,$main), linear-gradient($none,$none)
+                                    background-size: 0 2px, auto
+                                    background-repeat: no-repeat
+                                    background-position: center bottom
+                                    transition: all .3s ease-out
+                    +media-breakpoint-down(lg)
+                        border-top: 2px solid rgba($white, 1)
+        // Logo
+        .navbar-brand
+            img
+                max-height: 3rem
+            +media-breakpoint-down(lg)
+                margin: auto
+                order: 2
+                img
+                    margin-left: 40px
+                    max-width: 9rem
+
+        // Menu tool
+        .menutool
+            display: flex
+            order: 3
+            .menutool__search
+                form.search
+                    display: flex
+                    input
+                        opacity: 0
+                        display: block
+                        border-right: none
+                        position: fixed
+                        top: 4rem
+                        right: 0rem
+                        width: 35%
+                        z-index: 92
+                        transition: ease-in-out .3s
+                        height: 2.5rem
+                        border-top: none
+                        @include focus__form
+                        +media-breakpoint-up(xl)
+                            top: 6.5rem
+                            right: 4rem
+                            border-right: 1px
+                    .btn-outline-fekit
+                        border-radius: 0 1.5rem 1.5rem 0
+                        border: none
+                        cursor: pointer
+                    &:hover
+                        input
+                            opacity: 1
+
+            .menutool__shop
+                position: relative
+                display: block
+                width: 40px
+                height: 40px
+                cursor: pointer
+                .menutool__shop--count
+                    display: block
+                    line-height: 1
+                    position: absolute
+                    top: 20px
+                    right: 0px
+                    font-size: 0.5625rem
+                    background: $main-2
+                    color: $white
+                    text-align: center
+                    border-radius: 50px
+                    padding: 2px 3px
+            svg
+                color: $white
+        +media-breakpoint-down(lg)
+            .navbar-toggler
+                width: 40px
+                order: 1
+                z-index: 99
+                svg
+                    color: $white
+            .offcanvas-collapse
+                position: fixed
+                top: 0
+                bottom: 0
+                width: 100%
+                padding: 4rem 1rem
+                transition: transform .3s ease-in-out
+                transform: translateX(calc(-100% - 1rem))
+                z-index: 91
+                background: $black
+                +media-breakpoint-up(sm)
+                    width: 80%
+                +media-breakpoint-up(sm)
+                    width: 60%
+                +media-breakpoint-up(md)
+                    width: 40%
+                &.offcanvas-collapse--open
+                    transform: translateX(-1rem)
+                a.nav-link
+                    color: $white
+                    border-bottom: 1px solid rgba(darken($main, 5), .5)
+                    &:hover, &:active
+                        color: $main
+    // Class acitve when scroll menu
+    &.active
+        box-shadow: 0px 1px 5px rgba($black, .5)
+        transition: ease-in-out .5s
+        +media-breakpoint-up(xl)
+            margin-top: -3rem
+
+        input
+            box-shadow: 0px 1px 8px -10px rgba($black, .1), 0px 1px 1px 0px rgba($black, .1)
+////////////////////////////////////////////////////////////////
+// START MENUTOOL SHOP
+////////////////////////////////////////////////////////////////
+// Search when action
+.fekit-header-h-1__search
+    position: fixed
+    top: 0
+    right: -1px
+    width: 100%
+    background: $silver
+    height: 100%
+    z-index: 91
+    transition: all, .5s
+    transform: translateX(100%)
+    opacity: 0
+    +media-breakpoint-up(sm)
+        width: 60%
+    +media-breakpoint-up(md)
+        width: 40%
+    +media-breakpoint-up(lg)
+        width: 30%
+    &.search__open
+        transform: translateX(0%)
+        opacity: 1
+    .search__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: .5rem 1rem
+        background: $main
+        color: $white
+        font-size: .9rem
+        .search__header--title
+            text-transform: uppercase
+        button.btn.btn-outline-fekit
+            width: 40px
+            transition: all .3s ease-in-out
+            color: $white
+            &:hover
+                transform: rotate(270deg)
+    .search__body
+        height: 100%
+        border-left: 1px solid rgba($silver, .5)
+        background: $white
+        font-size: .9rem
+        padding: 1rem
+        overflow: auto
+        .search__body--form
+            border-radius: 0
+////////////////////////////////////////////////////////////////
+// START MENUTOOL SHOP
+////////////////////////////////////////////////////////////////
+.fekit-header-h-1__shop
+    opacity: 0
+    position: fixed
+    top: 0
+    right: -1px
+    width: 100%
+    background: $silver
+    height: 100%
+    z-index: 91
+    transition: all .5s ease-in-out
+    transform: translateX(100%)
+    +media-breakpoint-up(sm)
+        width: 60%
+    +media-breakpoint-up(md)
+        width: 40%
+    +media-breakpoint-up(lg)
+        width: 30%
+    &.shop__open
+        transform: translateX(0%)
+        opacity: 1
+    .shop__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: .5rem 1rem
+        background: $main
+        color: $white
+        font-size: .9rem
+        .shop__header--title
+            text-transform: uppercase
+        button.btn.btn-outline-fekit
+            width: 40px
+            transition: all .3s ease-in-out
+            color: $white
+            &:hover
+                transform: rotate(270deg)
+    .shop__body
+        height: 100%
+        border-left: 1px solid rgba($silver, .5)
+        background: $white
+        font-size: .9rem
+        padding: 1rem
+        overflow: auto
+        ul
+            list-style: none
+            padding: 0
+            margin-bottom: 7rem
+            li
+                figure
+                    display: flex
+                    border-bottom: 1px solid rgba($silver, .5)
+                    padding-bottom: 1rem
+                    align-items: center
+                    img
+                        width: 25%
+                        height: 25%
+                    figcaption
+                        width: 50%
+                        padding: 0 1rem
+                        .figcaption__content
+                            font-size: 1rem
+                        .figcaption__content--amount
+                            color: $red
+                            font-weight: bold
+                    svg
+                        cursor: pointer
+                        transition: all .3s ease-in-out
+                        &:hover
+                            color: $red
+    .shop__footer
+        position: fixed
+        bottom: 0
+        right: 0
+        background: lighten($color: $silver, $amount: 20%)
+        width: 100%
+        font-size: .9rem
+        .shop__footer--total
+            .shop__footer--totalContent
+                display: flex
+                justify-content: space-between
+                padding: .5rem 1rem
+        .shop__footer--button
+            display: flex
+            justify-content: space-between
+            .shop__footer--buttonLeft
+                cursor: pointer
+                padding: .5rem 1rem
+                background: darken($color: $red, $amount: 10%)
+                color: white
+                width: 65%
+                transition: all, .3s
+                &:hover,&:active
+                    background: darken($color: $red, $amount: 5%)
+            .shop__footer--buttonRight
+                cursor: pointer
+                padding: .5rem 1rem
+                background: $main
+                color: $white
+                width: 35%
+                text-align: center
+                transition: all, .3s
+                &:hover,&:active
+                    background: $main-2
+

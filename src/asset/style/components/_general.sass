@@ -1,0 +1,36 @@
+/*************************************************/
+/********** Front-End-Kit Project Style **********/
+/*************************************************/
+body
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 14px
+
+a
+    color: $main
+    transition: ease-in-out .3s
+    transition: all 0.3s ease 0s
+    &:hover
+        color: $extra
+        text-decoration: none
+    &:visited, &:active
+        color: $main
+
+// Bootstrap fix
+.form-control
+    border-radius: 0
+    &:focus
+        border-color: rgba($main, 0.25)
+        box-shadow: 0 0 0 0.2rem rgba($main, 0.25)
+
+btn, button
+    &:focus
+        outline: none !important
+        box-shadow: none !important
+label
+    width: 100%
+input, textarea
+    padding: .25rem .5rem
+    outline-color: $main
+    width: 100%
+    border-radius: 2px
+    border: 1px solid $gray

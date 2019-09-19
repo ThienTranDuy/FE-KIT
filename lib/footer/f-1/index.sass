@@ -1,0 +1,53 @@
+.fekit-footer-1
+    background: lighten($black,5)
+    color: $white
+    padding-top: 4rem
+    +media-breakpoint-up(lg)
+        padding-top: 5rem
+        text-align: left
+    h2
+        font-size: 1.5rem
+    figure
+        .box-img
+            margin-bottom: 1rem
+            img
+                width: 100%
+                padding: 1rem
+    h5
+        color: $main
+        text-transform: uppercase
+        font-size: 1.5rem
+        margin-bottom: .5rem
+        +media-breakpoint-up(lg)
+            margin-bottom: 1rem
+    .footer__content
+        display: flex
+        flex-direction: column
+        a
+            padding: .5rem 0
+            border-bottom: 1px solid lighten($black,15)
+            color: $gray-2
+            font-size: .9rem
+            &:hover, &:active
+                color: $white
+        .strong
+            color: $main
+            width: 5rem
+            padding-right: 1rem
+    .footer__top
+        text-align: center
+        +media-breakpoint-up(lg)
+            text-align: left
+    .footer__mid
+        margin: 1rem 0
+    .footer__bot
+        margin: 1rem 0
+    .copyright
+        font-size: .9rem
+        margin-top: 2rem
+        padding: 1rem 0
+        border-top: 1px solid lighten($black,20)
+        text-align: center
+        color: $gray-2
+        a
+            color: $main

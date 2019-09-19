@@ -1,0 +1,113 @@
+.fekit-box-1
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .title
+        text-align: center
+        margin-bottom: 2rem
+        +media-breakpoint-up(md)
+            font-size: 1rem
+            margin-bottom: 2rem
+        h2
+            font-size: 1.5rem
+            font-weight: 600
+            text-transform: uppercase
+            color: $main
+            margin-bottom: 1rem
+            +media-breakpoint-up(sm)
+                font-size: 1.8rem
+            strong
+                color: $white
+                background: $main
+                padding: .2rem .7rem
+                border-radius: 2px
+                border: none
+        p
+            font-size: .9rem
+            color: $gray
+            padding: 0 1rem
+        hr.size
+            width: 5rem
+            border-top: 2px solid rgba($main, .4)
+    .item
+        overflow: hidden
+        height: 350px
+        position: relative
+        margin-bottom: 1.5rem
+        +media-breakpoint-up(md)
+            margin-bottom: 0
+        .box
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 90
+            transition: ease-in-out .5s
+            background: rgba($black, .2)
+        .item__left, .item__right
+            height: 350px
+            width: 100%
+            background-repeat: no-repeat
+            background-position: center center
+            position: relative
+            transition: ease-in-out .5s
+        h3
+            font-size: 1.5rem
+            color: $white
+            position: absolute
+            top: 2rem
+            left: 2rem
+            z-index: 90
+            text-transform: uppercase
+            font-weight: 600
+            transition: all, .5s
+            &:after
+                transition: all, .5s
+                content: ""
+                width: 5.5rem
+                height: 3px
+                background: $white
+                position: absolute
+                top: 0
+                left: 0
+                transform: translateY(2.5rem)
+            &:hover
+                color: $extra
+                &:after
+                    background: $extra
+        .item__more
+            color: $white
+            position: absolute
+            bottom: 2rem
+            right: 3rem
+            z-index: 90
+            font-weight: 600
+            opacity: 0
+            transition: all, .5s
+            &:hover
+                color: $extra
+                &:after
+                    background: $extra
+            &:after
+                transition: all, .5s
+                content: ""
+                width: 2.5rem
+                height: 3px
+                background: $white
+                position: absolute
+                top: 0
+                right: -1rem
+                transform: rotate(90deg)
+                opacity: 0
+                transition: all, .5s
+        &:hover
+            .box
+                background: rgba($black, .5)
+            .item__left, .item__right
+                transform: scale(1.2)
+            .item__more
+                opacity: 1
+                padding-right: 1rem
+                &:after
+                    opacity: 1

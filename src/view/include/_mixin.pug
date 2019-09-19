@@ -1,0 +1,14 @@
+//- src/views/mixins/list.pug
+
+//- menu bootstrap
+mixin list(...items)
+    each item in items
+        li.nav-item
+            a.nav-link(href="javascript:void(0)")=item
+
+mixin listDrop(main,...items)
+        li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')=main
+                .dropdown-menu
+                    each item in items
+                        a.dropdown-item(href='javascript:none')=item

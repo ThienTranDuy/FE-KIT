@@ -1,0 +1,106 @@
+.fekit-newsdetail-1
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .side__bar
+        .box__news
+            h2
+                font-size: 1.5rem
+                text-transform: uppercase
+                color: $black
+                border-left: 3px solid $main-2
+                padding-left: .5rem
+                margin-bottom: 1rem
+                margin-top: 1.5rem
+                +media-breakpoint-up(md)
+                    margin-top: 0
+        .news__items
+            figure
+                display: flex
+                flex-direction: column
+                border-bottom: 1px dashed $gray
+                margin-bottom: 1.5rem
+                img
+                    width: 100%
+                figcaption
+                    display: flex
+                    h3
+                        font-size: 1.2rem
+                        text-overflow: ellipsis
+                        word-wrap: break-word
+                        overflow: hidden
+                        max-height: 4.8em
+                        line-height: 1.2em
+                        padding: .5rem 0
+                        color: $black
+                        transition: all, .3s
+                        &:hover, &:active
+                            color: $main-2
+            +media-breakpoint-up(md)
+                figure
+                    flex-direction: row
+                    img
+                        width: 50%
+                        height: 5rem
+                    figcaption
+                        margin-left: 1rem
+                        h3
+                            padding: 0
+    .box__detail
+        h2
+        p
+            text-align: justify
+        p.text-align-right
+            text-align: right
+        .text-align-center
+            text-align: center !important
+            font-size: .9rem
+    .box__feedback
+        padding: 2.5rem 0
+        +media-breakpoint-up(md)
+            padding: 4rem 0
+        .nav-pills
+            .nav-link
+                border-radius: 1px
+                transition: all, .3s
+                &.active
+                    background: $main !important
+                    color: $white
+                    position: relative
+                    &:after
+                        position: absolute
+                        bottom: -10px
+                        left: 0
+                        right: 0
+                        content: ''
+                        width: 0
+                        height: 0
+                        margin: 0 auto
+                        border-style: solid
+                        border-width: 10px 10px 0 10px
+                        border-color: $main transparent transparent transparent
+        .tab-content
+            .tab-pane
+                padding: 2rem 1rem
+                border: 1px solid $main
+                +media-breakpoint-up(md)
+                    padding: 1rem 2rem
+                .feedback__description
+                    p
+                        margin-bottom: 0rem
+                .feedback__acount
+                    h3
+                        font-size: 1.2rem
+                        color: lighten($black, 30)
+                        & strong
+                            color: $black
+                    p
+                        color: lighten($black, 40)
+                        +media-breakpoint-up(md)
+                            padding-left: 2rem
+                    &.feedback__acount--first
+                        border-bottom: 1px solid $gray
+                        margin-bottom: 1rem
+                .feedback__form
+                    input, textarea
+                        border-color: $gray

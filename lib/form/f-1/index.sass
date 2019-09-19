@@ -1,0 +1,86 @@
+.fekit-form-1
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .title
+        text-align: center
+        margin-bottom: 2rem
+        +media-breakpoint-up(md)
+            font-size: 1rem
+            margin-bottom: 2rem
+        h2
+            font-size: 1.5rem
+            text-transform: uppercase
+            margin-bottom: 1rem
+            +media-breakpoint-up(sm)
+                font-size: 1.8rem
+            strong
+                color: $main
+        p
+            font-size: .9rem
+            color: $gray
+            padding: 0 1rem
+    .separator
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        height: 20px
+        &:after,&:before
+            content: ""
+            width: 100px
+            border-bottom: 1px solid rgba($black,.2)
+            position: absolute
+            top: calc(50% - 3px)
+            +media-breakpoint-up(sm)
+                width: 300px
+        &:before
+            left: 20%
+        &:after
+            right: 20%
+        svg
+            font-size: 6px
+            color: $main
+            position: absolute
+            top: 25%
+            z-index: 90
+
+    form
+        input,textarea
+            margin-bottom: 1rem
+            padding: .5rem 1rem
+            background: lighten($gray,47)
+            color: $black
+            border-color: lighten($gray,30)
+        .input__submit
+            width: 10rem
+            letter-spacing: 2px
+            text-transform: uppercase
+            font-size: .8rem
+
+    h6
+        font-weight: 600
+
+    .form__content--right
+        display: flex
+        flex-direction: column
+        h6
+            text-transform: uppercase
+        a
+            padding: .5rem 0
+            border-bottom: 1px solid lighten($gray,30)
+            color: darken($gray-2, 35)
+            transition: all .3s
+            font-size: .9rem
+            &:hover, &:active
+                color: darken($gray-2, 40)
+        .strong
+            color: $main
+            width: 5rem
+            padding-right: 1rem
+
+    iframe
+        padding-top: 2.5rem
+        +media-breakpoint-up(md)
+            padding-top: 4rem

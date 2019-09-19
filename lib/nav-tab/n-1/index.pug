@@ -1,0 +1,85 @@
+section.fekit-nav-tab-1
+    .container
+        .row
+            .col-3
+                #v-pills-tab.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+                    a#v-pills-home-tab.nav-link.active(data-toggle='pill', href='#v-pills-home', role='tab', aria-controls='v-pills-home', aria-selected='true') Bảng điều khiển
+                    a#v-pills-profile-tab.nav-link(data-toggle='pill', href='#v-pills-profile', role='tab', aria-controls='v-pills-profile', aria-selected='false') Thông tin khách hàng
+                    a#v-pills-messages-tab.nav-link(data-toggle='pill', href='#v-pills-messages', role='tab', aria-controls='v-pills-messages', aria-selected='false') Lịch sử mua hàng
+                    a#v-pills-settings-tab.nav-link(href='404.html') Đăng xuất
+            .col-9
+                #v-pills-tabContent.tab-content
+                    #v-pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-home-tab')
+                        .container
+                            .title
+                                h3 Bảng điều khiển
+                            p Xin chào khách hàng <b>Trần Duy Thiên</b>!
+                            p Kiểm tra các đơn hàng đã mua tại mục <b>Đơn hàng</b>
+                            p Kiểm tra và cập nhập thông tin cá nhân tại mục <b>Cập nhập thông tin</b>
+                    #v-pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab')
+                        .container
+                            .title
+                                h3 Cập nhập thông tin
+                            .row
+                                .col-12
+                                    form
+                                        .row
+                                            .col-md-6
+                                                .form-group.form__type.form__type--01
+                                                    label Họ và tên
+                                                    input(type='text', aria-required='true', aria-invalid='false')
+                                                .form-group.form__type.form__type--01
+                                                    label Địa chỉ email
+                                                    input(type='text', aria-required='true', aria-invalid='false')
+                                                .form-group.form__type.form__type--01
+                                                    label Mật khẩu
+                                                    input(type='password', aria-required='true', aria-invalid='false')
+                                            .col-md-6
+                                                .form-group.form__type.form__type--01
+                                                    label Tên tài khoản
+                                                    input(type='text', size='40', aria-required='true', aria-invalid='false')
+                                                .form-group.form__type.form__type--01
+                                                    label Số điện thoại
+                                                    input(type='text', aria-required='true', aria-invalid='false')
+                                                .form-group.form__type.form__type--01
+                                                    label Nhập lại mật khẩu
+                                                    input(type='password', aria-required='true', aria-invalid='false')
+                                        .row
+                                            .col
+                                                .form-group.form__type.form__type--01
+                                                    label Địa chỉ cư trú
+                                                    input(type='text', aria-required='true', aria-invalid='false')
+                                        .row.justify-content-center
+                                            .col-8
+                                                .form-group.form__type
+                                                    input.btn.btn-success.btn-block(type='submit', value='CẬP NHẬP THÔNG TIN')
+
+                    #v-pills-messages.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab')
+                        .container
+                            .title
+                                h3 Lịch sử mua hàng
+                            table.table.table-hover
+                                thead
+                                    tr
+                                    th(scope='col') Mã HĐ
+                                    th(scope='col') Ngày mua
+                                    th(scope='col') Tổng tiền
+                                    th(scope='col') Trạng thái
+                                    th(scope='col') Xem chi tiết
+                                tbody
+                                    tr
+                                    th(scope='row') 1001
+                                    td 17/03/2018
+                                    td 1.990.000 VNĐ
+                                    td Đã thanh toán
+                                    td
+                                        a(href="tai-khoan-hoa-don.html") Xem chi tiết
+
+                                tbody
+                                    tr
+                                    th(scope='row') 1105
+                                    td 20/03/2018
+                                    td 8.990.000 VNĐ
+                                    td Chưa thanh toán
+                                    td
+                                        a(href="tai-khoan-hoa-don.html") Xem chi tiết

@@ -1,0 +1,57 @@
+.fekit-nav-tab-1
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .nav-pills
+        .nav-link
+            transition: all, .3s
+            color: $black
+            &:hover, &:active
+                color: $main-2
+            &.active
+                background: $main
+                color: $white
+                border-radius: 0
+    .title
+        margin-bottom: 2rem
+        +media-breakpoint-up(md)
+            font-size: 1rem
+            margin-bottom: 2rem
+        h3
+            border-left: 3px solid $main
+            padding-left: .5rem
+            font-size: 1.5rem
+            text-transform: uppercase
+            color: $black
+            margin-bottom: 1rem
+            +media-breakpoint-up(sm)
+                font-size: 1.8rem
+    form
+        .form__type
+            a
+                color: $black
+                &:hover, &:active
+                    color: $main-2
+            &.form__type--01
+                label
+                input
+                    border-radius: 0 3px 3px 0
+        .btn.btn-success.btn-block
+            text-transform: uppercase
+            text-transform: uppercase
+            border-color: $main
+            background: $black
+            color: $white
+            &:hover, &:active
+                background: $main
+
+    table
+        display: block
+        width: 100%
+        overflow-x: auto
+        th
+            min-width: 7rem
+        a
+            transition: all, .3s
+            &:hover
+                color: $main-2

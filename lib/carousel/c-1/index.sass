@@ -1,0 +1,60 @@
+/* carousel-01 */
+.fekit-carousel-1
+    background: $black-3
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .owl-carousel
+        .owl-stage-outer
+        .owl-nav
+            .owl-prev
+                position: absolute
+                top: 50%
+                left: 1rem
+                width: 2.5rem
+                height: 2.5rem
+                border-radius: 1px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba($white, .5)
+                transition: ease-in-out .3s
+                &:hover, &:focus
+                    background: rgba($main, .5)
+                &:active
+                    background: rgba($extra, .5)
+            .owl-next
+                position: absolute
+                top: 50%
+                right: 1rem
+                width: 2.5rem
+                height: 2.5rem
+                border-radius: 1px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba($white, .5)
+                transition: ease-in-out .3s
+                &:hover, &:focus
+                    background: rgba($main, .5)
+
+                &:active
+                    background: rgba($extra, .5)
+        .owl-dots
+            width: 5rem
+            position: absolute
+            bottom: 5%
+            left: calc(50% - 2.5rem)
+            .owl-dot
+                span
+                    background: lighten($main, 50)
+                &.active
+                    span
+                        background: lighten($main, 20)
+    article
+        a
+            img
+                transition: all .3s
+                filter: grayscale(100%)
+                &:hover, &:active
+                    filter: grayscale(0%)

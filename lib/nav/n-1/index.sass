@@ -1,0 +1,94 @@
+.fekit-nav-1
+    padding: 6rem 0 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 9rem 0 2rem 0
+    .car__step
+        background: lighten($gray, 45)
+        overflow: hidden
+        display: flex
+        .step
+            cursor: pointer
+            width: 25%
+            padding: 10px 25px
+            position: relative
+            display: none
+            +media-breakpoint-up(lg)
+                display: block
+            &:before
+                content: ''
+                display: block
+                width: 0
+                height: 0
+                border-top: 28px solid transparent
+                border-bottom: 28px solid transparent
+                border-right: 0 solid transparent
+                border-left: 17px solid $white
+                position: absolute
+                top: -3px
+                right: -2px
+                transform: translateX(15px)
+                z-index: 10
+            &:after
+                content: ''
+                display: block
+                width: 0
+                height: 0
+                border-top: 25px solid transparent
+                border-bottom: 25px solid transparent
+                border-right: 0 solid transparent
+                border-left: 15px solid lighten($gray, 45)
+                position: absolute
+                top: 0px
+                right: 0px
+                transform: translateX(15px)
+                z-index: 11
+            .step__link
+                color: $black
+                display: flex
+                align-items: center
+                .step__number
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    margin-right: .5rem
+                    .num__check
+                        display: none
+                        width: 2rem
+                        height: 2rem
+                        border-radius: 50%
+                        background: lighten($gray, 35)
+                        text-align: center
+                        line-height: 2rem
+                        color: $white
+                        svg
+
+                    .num
+                        width: 2rem
+                        height: 2rem
+                        border-radius: 50%
+                        background: lighten($gray, 35)
+                        text-align: center
+                        line-height: 2rem
+                .step__name
+            &.step__active
+                background: lighten($gray, 35)
+                display: block
+                width: 100%
+                &:after
+                    border-left: 15px solid lighten($gray, 35)
+                +media-breakpoint-up(lg)
+                    width: 25%
+                .num
+                    background: darken($red, 2) !important
+                    color: $white
+            &.step__finish
+                background: lighten($gray, 35)
+                &:after
+                    border-left: 15px solid lighten($gray, 35)
+                .step__number
+                    .num__check
+                        display: block !important
+                        background: $main !important
+                        color: $white
+                    .num
+                        display: none !important

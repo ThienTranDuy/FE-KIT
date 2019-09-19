@@ -1,0 +1,24 @@
+@mixin button ($color)
+    color: $color
+    border-color: $color
+    &:hover
+        color: #fff
+        background-color: $color
+        border-color: $color
+    &:focus, &.focus
+        box-shadow: 0 0 0 0.2rem rgba($color, 0.5)
+    &.disabled, &:disabled
+        color: $color
+        background-color: transparent
+    &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle
+        color: #fff
+        background-color: $color
+        border-color: $color
+        &:not(:disabled):not(.disabled):active:focus, &:not(:disabled):not(.disabled).active:focus,
+        .show > &.dropdown-toggle:focus
+        box-shadow: 0 0 0 0.2rem rgba($color, 0.5)
+@mixin focus__form
+    &:focus
+        border: none
+        box-shadow: none

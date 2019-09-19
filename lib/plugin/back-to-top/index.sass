@@ -1,0 +1,23 @@
+#back-to-top
+    position: fixed
+    bottom: 10%
+    right: 4%
+    background: rgba(darken($main, 5), .5)
+    width: 2.5rem
+    height: 3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    z-index: 90
+    transition: ease-in-out .3s
+    opacity: 0
+    &.show
+        opacity: 1
+        transition: ease-in-out .3s
+    svg
+        font-size: 1.2rem
+        color: $white
+        transition: all ease-in-out .3s
+    &:hover
+        background: rgba(darken($main, 5), 1)

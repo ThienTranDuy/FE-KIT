@@ -1,0 +1,31 @@
+.number-animation
+    background-position: center center !important
+    background-size: cover !important
+    background-repeat: no-repeat !important
+    background-attachment: fixed !important
+    padding: 2.5rem 0
+    +media-breakpoint-up(md)
+        padding: 4rem 0
+    .item
+        display: flex
+        justify-content: space-between
+        margin: 1rem
+        align-items: center
+        text-align: center
+        figure
+            color: $main
+            font-size: 4rem
+        figcaption
+            width: 50%
+            display: flex
+            color: $white
+            flex-direction: column-reverse
+            font-size: 3rem
+            text-transform: uppercase
+            h3
+                color: $main
+                font-size: 1rem
+        +media-breakpoint-up(md)
+            flex-direction: column
+            figcaption
+                width: 100%
