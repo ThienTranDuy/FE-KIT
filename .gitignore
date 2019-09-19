@@ -1,0 +1,9 @@
+# Front End Kit Not upload
+node_modules
+.vscode
+.DS_Store
+package.lock
+yarn.lock
+.yarn-error.log
+dist
+yarn-error.log
