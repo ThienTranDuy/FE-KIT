@@ -1,4 +1,4 @@
-# WEBPACK-WEBKIT
+# FRONTEND KIT
 Easy, Faster, light-weight
 
 ## Author
